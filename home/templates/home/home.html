@@ -1,0 +1,115 @@
+{% extends 'home/layout.html' %}
+{% load static %}
+
+{% block main  %}
+    
+    <div class="Slider__inner">
+        <button class="PrevSlider"></button>
+        <div class="Slider">
+            <div style="background-image: url({% static 'home/img/sliderHome/1.jpg' %});" class="Slider__item"></div>
+            <div style="background-image: url({% static 'home/img/sliderHome/2.png' %});" class="Slider__item"></div>
+            <div style="background-image: url({% static 'home/img/sliderHome/3.png' %});" class="Slider__item"></div>
+            <div style="background-image: url({% static 'home/img/sliderHome/4.jpg' %});" class="Slider__item"></div>
+            <div style="background-image: url({% static 'home/img/sliderHome/5.png' %});" class="Slider__item"></div>
+            <div style="background-image: url({% static 'home/img/sliderHome/6.png' %});" class="Slider__item"></div>
+            <div style="background-image: url({% static 'home/img/sliderHome/7.png' %});" class="Slider__item"></div>
+            <div style="background-image: url({% static 'home/img/sliderHome/8.png' %});" class="Slider__item"></div>
+        </div>
+        <button class="NextSlider"></button>
+        <div class="Slider__point">
+            <div class="point__item PointActive"></div>
+            <div class="point__item"></div>
+            <div class="point__item"></div>
+            <div class="point__item"></div>
+            <div class="point__item"></div>
+            <div class="point__item"></div>
+            <div class="point__item"></div>
+            <div class="point__item"></div>
+        </div>
+    </div>
+    <div>
+        <div class="HomeTitleWhoUs">Хто ми?</div>
+        <div class="HomeUnTitleWhoUs">Компанія <span class="WhiteCol">Blue&</span><span class="YellowCol">Yellow</span></div>
+        <div class="container WhoUsText">
+            <p>Ми виробники <span class="YellowCol">корпоративних товарів</span> із тканини та шкіри.</p>
+            <p>Наша компанія <span class="YellowCol">виробляє</span> косметички, фартуки, чохли під інструменти, форму, футболки, брелоки та багато <span class="YellowCol">іншої продукції.</span> </p>
+            <p>Також виробляємо <span class="YellowCol">індивідуальні</span> товари під замовлення за побажаннями клієнта та наносимо логотип <span class="YellowCol">Вашої компанії</span> на будь'яку продукцію.</p>
+            <p>Наші вироби використовують в цілях <span class="YellowCol">реклами</span> свого бренду, корпоративних <span class="YellowCol">подарунків</span> для клієнтів та співробітників та як <span class="WhiteCol">брендоване екіпірування</span> своїх робітників.</p>
+        </div>
+    </div>
+
+    <div style=" background: url({% static 'home/img/WhyWe/bgwwg.png' %}); background-size: cover;">
+        <div class="WWG container py-5">
+            <h1 class="WWG__title pt-3 pb-5">Чим можемо бути Вам корисними?</h1>
+            <div class="WWG__solution pt-3">
+                <div class="w-100 py-2">
+                    <div class="WWG_item WWG_item1">
+                        <div class="WWG_item_text">Підвищуємо впізнаваємість <span class="YellowCol">вашого бренду</span></div>
+                        <img class="WWG_HEX WWG_HEX1" src="{% static 'home/img/WhyWe/form.png' %}">
+                    </div>
+                    <div class="WWG_item ">
+                        <div class="WWG_item_text">Робимо унікальні подарунки для <span class="YellowCol">ваших клієнтів</span> та співробітників</div>
+                        <img class="WWG_HEX WWG_HEX1" src="{% static 'home/img/WhyWe/gift.png' %}">
+
+                    </div>
+                    <div class="WWG_item WWG_item1">
+                        <div class="WWG_item_text">Приймаємо <span class="YellowCol">індивідуальні</span> замовлення</div>
+                        <img class="WWG_HEX WWG_HEX1" src="{% static 'home/img/WhyWe/orderr.png' %}">
+
+                    </div>
+                    <div class="WWG_item ">
+                        <div class="WWG_item_text">Самі розроблюємо <span class="YellowCol">будь-які</span> моделі</div>
+                        <img class="WWG_HEX WWG_HEX1" src="{% static 'home/img/WhyWe/mikino.png' %}">
+
+                    </div>
+                    <div class="WWG_item WWG_item1">
+                        <div class="WWG_item_text">Наносимо логотип на <span class="YellowCol">будь-який</span> товар</div>
+                        <img class="WWG_HEX WWG_HEX1" src="{% static 'home/img/WhyWe/banank.png' %}">
+
+                    </div>
+                    <div class="WWG_item ">
+                        <div class="WWG_item_text">Допоможемо втілити <span class="YellowCol">Ваші бажання</span> в реальність</div>
+                        <img class="WWG_HEX WWG_HEX1" src="{% static 'home/img/WhyWe/dream.png' %}"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="overflow:hidden;">
+        <div class="container">
+            <h1 style="font-size: 50px;top:0;" class=" m-0 text-center WhiteCol py-3">З нами <span class="YellowCol">працюють</span></h1>
+            <div class="IndividualClassPersonal d-flex flex-wrap justify-content-center">
+                <div class="d-flex justify-content-center align-items-center w-100 linesIndividualClass linesIndividualClass1">
+                    <a href="https://fastline.studio/" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#fff; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static 'home\img\WorkWithUs\50247587_646931955723632_5995199021461798912_n.png' %}"></a>
+                    <a href="https://funsuntravel.ru/" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#f0c211; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static 'home\img\WorkWithUs\3234232168.png' %}"></a>
+                    <a href="https://alf.ua/" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#fff; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static 'home\img\WorkWithUs\alf-8.png' %}"></a>
+                    <a href="https://aromakava.ua/" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#f0c211; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static 'home\img\WorkWithUs\aroma-kava.png' %}"></a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center w-100 linesIndividualClass linesIndividualClass2">
+                    <a href="https://kozatska-rada.ua/" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#fff; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static 'home\img\WorkWithUs\kr_logo_var-01-kopiya-2.png' %}"></a>
+                    <a href="https://www.poehalisnami.ua/ua" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#f0c211; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static "home\img\WorkWithUs\let'sGoWothUs.png" %}"></a>
+                    <a href="https://tat.ua/" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#fff; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static "home\img\WorkWithUs\logo.png" %}"></a>
+                    <a href="https://hlebodar.ua/" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#f0c211; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static "home\img\WorkWithUs\images.png" %}"></a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center w-100 linesIndividualClass linesIndividualClass1">
+                    <a href="https://agrosem.ua/" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#fff; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static "home\img\WorkWithUs\logo-agrosem.png" %}"></a>
+                    <a href="https://marengo.ua/" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#f0c211; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static "home\img\WorkWithUs\Marengo_logo_3d4339eb2fe5d59041ad5f0059711dc0.png" %}"></a>
+                    <a href="https://nemiroff.vodka/ru-ua" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#fff; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static "home\img\WorkWithUs\nemiroff-logo-51BA93EF4E-seeklogo.com.png" %}"></a>
+                    <a href="https://my.ukrsibbank.com/" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#f0c211; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static "home\img\WorkWithUs\UKRSIBBANK_BNP_Paribas_Group.png" %}"></a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center w-100 linesIndividualClass linesIndividualClass2">
+                    <a href="https://www.vodafone.ua/" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#fff; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static "home\img\WorkWithUs\Vodafone.png" %}"></a>
+                    <a href="https://www.volkswagen.ua/" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#f0c211; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static "home\img\WorkWithUs\Volkswagen-PNG-Pic.png" %}"></a>
+                    <a href="https://www.volkswagen.ua/" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#f0c211; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static "home\img\WorkWithUs\il molino.png" %}"></a>
+                    <a href="https://www.volkswagen.ua/" class="d-flex align-items-center justify-content-center"style="width: calc(100%/4);background:#f0c211; border:2px solid #141c27;;display:flex;"><img style="max-width:calc(100%);" src="{% static "home\img\WorkWithUs\Coca-Cola-Logo-1987-2009.png" %}"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock main  %}
+{% block scripts %}
+    <Script src="{% static 'home/js/slider.js' %}"></Script>
+    <Script src="{% static 'home/js/menu.js' %}"></Script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+{% endblock scripts %}

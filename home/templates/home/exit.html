@@ -1,0 +1,15 @@
+{% extends 'home/layout.html' %}
+{% load static %}
+
+{% block main  %}
+
+{% for mess in messages %}
+<div class="d-flex justify-content-center" style="padding: 200px 0;"> 
+    <span style="padding: 80px 100px!important;" class=" alert alert-success">{{ mess }}<span>
+</div>
+{% endfor %}
+{% endblock main  %}
+{% block scripts %}
+    <Script src="{% static 'home/js/menu.js' %}"></Script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+{% endblock scripts %}

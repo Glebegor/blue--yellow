@@ -1,0 +1,24 @@
+{% extends 'home/layout.html' %}
+{% load static %}
+
+{% block main  %}
+
+{% if user.is_superuser%}
+    <div class="goods">
+        <div class="container">
+            <form class="WhiteCol AddGodesForm" enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+                <div class="text-right w-25 mx-auto">
+                    {{ form.as_p }}
+                    <button type="submit" value="Submit" class="">Відправити</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endif %}
+
+{% endblock main  %}
+{% block scripts %}
+    <Script src="{% static 'home/js/menu.js' %}"></Script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+{% endblock scripts %}

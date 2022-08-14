@@ -1,0 +1,24 @@
+{% extends 'home/layout.html' %}
+{% load static %}
+
+{% block main  %}
+
+    <div class="goods">
+        <div class="container">
+            <form class="WhiteCol OrderCrGodesForm AddGodesForm" enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+                <div class="text-left w-50 mx-auto">
+                    <h3 class="YellowCol text-left pb-2"><span class="">Опис замовлення</span></h3>
+                    {{ OrdersForm.as_p }}
+                    <button type="submit" value="Submit" class="goodsBackOrderButton goodsBackButton">Відправити</button>
+                    <div class="pt-3">Не обов'язкові поля *</div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock main  %}
+{% block scripts %}
+    <Script src="{% static 'home/js/menu.js' %}"></Script>
+    <Script src="{% static 'home/js/inp.js' %}"></Script>
+{% endblock scripts %}

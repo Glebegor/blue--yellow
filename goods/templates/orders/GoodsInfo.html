@@ -1,0 +1,35 @@
+{% extends 'home/layout.html' %}
+{% load static %}
+
+
+{% block main  %}
+<div style="padding: 80px 0;" class="goods">
+     <div class="container">
+        <a href="{% url 'goodesCat' cat=TitleObjects.Title %}" class="goodsBackButton"><button>Назад до товарів</button></a>
+        {% if user.is_superuser %}<a href="{% url 'goodesRepul' id=TitleObjects.id %}" class="goodsBackButton"><button>Змінити Товар</button></a>{% endif %}
+        
+        <div class="d-flex flex-wrap">
+            {% for item in goodsModel %}
+
+            <div class="goods__inner__item w-100 WhiteCol align-items-center justify-content-around">
+                <img class="goods__item__imgInfo" src={{item.imageGoodes.url}}>
+                <div style="font-size: 20px;" class="goods__item__discription">
+                    <h4 style="font-size: 28px;" class="text-uppercase goods__item__name"><span class="YellowCol">{{ item.Title}}</span> {{ item.version }}</h5>
+                    <div class="goods__item__">Артикул:<span class="YellowCol">{{ item.article }}</span></div>
+                    <div class="goods__item__">Матеріал:<span class="YellowCol">{{ item.material }}</span></div>
+                    <div class="goods__item__">Фурнітура:<span class="YellowCol">{{ item.furniture }}</span></div>
+                    <div class="goods__item__">Колір:<span class="YellowCol">{{ item.colors }}</span></div>
+                    <div class="goods__item__">Ціна:<span class="YellowCol">від {{ item.price }} грн</span></div>
+                    <a  href="{% url 'OrderOfGoods' %}"><button class="nav__btn my-3" id="Info__Goods__kos__button"><img src="{% static "home/img/WhyWe/blue/kos2.png" %}"></button></a>
+                    <div style="font-size: 14px!important;">ціна залежить від кількості, брендуванню, та матеріалу*</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+     </div>
+</div>
+{% endblock main  %}
+{% block scripts %}
+    <Script src="{% static 'home/js/menu.js' %}"></Script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+{% endblock scripts %}

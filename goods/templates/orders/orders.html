@@ -1,0 +1,33 @@
+{% extends 'home/layout.html' %}
+{% load static %}
+
+
+{% block main  %}
+<div class="goods">
+     <div class="container">
+        <h1 class="mt-5 YellowCol goods__title">Каталог товарів{% if user.is_superuser %}<a href="{% url 'goodesNew' %}"><button class="goods__new__button">Новий товар</button></a>{% endif %}</h1>
+        
+        <div class="d-flex flex-wrap pb-5 mb-5">
+            {% for item in goodsModel %}
+            <div class="w-25 WhiteCol">
+                {% comment %} 
+                <div class="goods__item__">Артикул:{{ item.article }}</div>
+                <div class="goods__item__">Матеріал:{{ item.material }}</div>
+                <div class="goods__item__">Фурнітура:{{ item.furniture }}</div>
+                <div class="goods__item__">Колір:{{ item.colors }}</div>
+                <div class="goods__item__">Ціна:{{ item.price }}</div> {% endcomment %}
+                {% comment %} <div class="goods__item__">фото:<img class="w-100 goods__item__img" src={{item.imageGoodes.url}} ></div> {% endcomment %}
+                <a href="{% url 'goodesCat' cat=item.Title %}" class="text-decoration-none goods__item d-flex justify-content-center align-items-center" style="height:256px;background-image: url({{item.imageGoodes.url}}); background-size: cover;">
+                    <h4 class=" goods__item__name"><span class="text-uppercase YellowCol">{{ item.Title}}</span></h4>
+                </a>
+
+            </div>
+            {% endfor %}
+        </div>
+     </div>
+</div>
+{% endblock main  %}
+{% block scripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <Script src="{% static 'home/js/menu.js' %}"></Script>
+{% endblock scripts %}
