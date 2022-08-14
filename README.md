@@ -44,7 +44,7 @@ Change name of spreadsheet(line 13)<br>
 
 <h1>About Project</h1>
 
-Hi, ma name is Gleb! And This web-site was create for Blue&Yellow corporation. 
+Hi, ma name is Gleb! And this web-site was create for Blue&Yellow corporation. 
 On this site you can order consignment of leather products and anower products.
 To have contact with Blue&Yellow corporation you can check footer.
 Admins can add, delete and change goods with some forms. 
